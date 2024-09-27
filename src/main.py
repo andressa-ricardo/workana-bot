@@ -14,6 +14,7 @@ def login_workana():
     username = os.getenv('WORKANA_EMAIL')
     password = os.getenv('WORKANA_PASSWORD')
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver.maximize_window()
     driver.get(os.getenv('URL_WORKANA'))
     time.sleep(5)
     
